@@ -9,6 +9,19 @@ def main(lista, getnum):
     for i in range(0, getnum):
         passchar = random.choice(lista)
         password = password + passchar
+    print(password)
+    passwordagain()
+def passwordagain():
+    again = input("Do you want to generate another password(y/n)?:    ")
+    if (again == 'y'):
+        main(lista,getnum)
+    elif(again == 'n'):
+        exit()
+    else:
+        print("Sorry, couldn't understand what you were saying.")
         passwordagain()
+main(lista, getnum)
+        
+    
     
     
